@@ -225,8 +225,33 @@ social-icons img {
 
 /* Responsive styling */
 @media (max-width: 768px) {
+
     header img {
         max-width: 90%;
+        padding: 5.2rem 0;
+    }
+
+    body {
+        background: url('images/background.jpg') no-repeat;
+        background-color: #fe14ff;
+        line-height: 1.2;
+    }
+
+    h2 {
+        font-size: 7em;
+    }
+    
+    #manifesto p {
+        font-size: 1em;
+        text-align: justify;
+        margin: 0 auto;
+        max-width: 600px;
+    }
+
+    #manifestobox {
+        background: url('images/bg_manifesto.png') no-repeat center bottom scroll;
+        background-size: 100% 100%;
+        padding: 0px 10px;
     }
 
     .team-members .member {
@@ -241,6 +266,30 @@ social-icons img {
 @media (max-width: 480px) {
     header img {
         max-width: 100%;
+        padding: 8rem 0;
+    }
+
+    body {
+        background: url('images/background.jpg') no-repeat ;
+        background-color: #fe14ff;
+        line-height: 1.2;
+    }
+
+    h2 {
+        font-size: 4em;
+    }
+
+    #manifestobox {
+        background: url('images/bg_manifesto.png') no-repeat center bottom scroll;
+        background-size: 100% 100%;
+        padding: 0px 10px;
+    }
+
+    #manifesto p {
+        font-size: 1em;
+        text-align: justify;
+        margin: 0 auto;
+        max-width: 400px;
     }
 
     .team-members .member {
