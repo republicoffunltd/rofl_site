@@ -1,0 +1,253 @@
+/* Reset some default styles */
+html {
+    scroll-behavior: smooth;
+}
+
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* Custom fonts */
+@font-face {
+    font-family: 'NewspaperCutout';
+    src: url('fonts/NewspaperCutoutWhiteOnBlac-Rg.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'VeteranTypewriter';
+    src: url('fonts/veteran typewriter.ttf') format('truetype');
+}
+
+/* Basic body styling */
+body {
+    font-family: 'VeteranTypewriter', Arial, sans-serif;
+    line-height: 1.6;
+    background: url('images/background.jpg') no-repeat center top fixed;
+    background-color: #fe14ff;
+    background-size: 100% auto;
+    color: #000;
+    background-attachment: scroll;
+}
+
+h2 {
+    font-family: 'NewspaperCutout', Arial, sans-serif;
+    font-size: 8em;
+    color: #000;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+h3 {
+    font-family: 'VeteranTypewriter', Arial, sans-serif;
+    line-height: 1;
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 0.5rem;
+    margin-bottom: 0.2rem;
+}
+
+h4 {
+    font-family: 'VeteranTypewriter', Arial, sans-serif;
+    color: #333;
+    text-align: center;
+    font-size: 1em;
+    margin-top: 0.5rem;
+    margin-bottom: 0.2rem;
+}
+
+/* Header styling */
+header {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+header img {
+    max-width: 80%;
+    height: auto;
+    padding: 3.7rem 0;
+}
+
+
+/* Navbar styling */
+.navbar {
+    background-color: transparent;
+    text-align: center;
+    margin-top: 5px; /* Adjust top margin as needed */
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1.5em;
+}
+
+.navbar ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.navbar ul li a {
+    color: #000; /* Black text color */
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #fe14ff; /* Hover text color */
+}
+
+/* Arrows */
+#scroll-arrows {
+    margin-top: 1rem;
+}
+
+.arrow {
+    font-size: 1rem;
+    color: #e14ff;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/*back to top*/
+
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: none; /* Hide by default */
+    border-radius: 5px;
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+#back-to-top:hover {
+    background-color: #555;
+}
+
+/* Main content styling */
+main {
+    padding: 1rem;
+}
+
+main section {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+/* Manifesto text styling */
+
+#manifestobox {
+    background: url('images/bg_manifesto.png') no-repeat center center scroll;
+}
+
+#manifesto p {
+    font-size: 1.5em;
+    text-align: justify;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+/* Technologies section */
+.tech-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.tech-logos img {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+/* Team members section */
+.team-members {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.team-members .member {
+    text-align: center;
+    max-width: 200px;
+    flex-basis: calc(33.33% - 2rem);
+    margin: 1rem;
+    font-size: 1.2em;
+}
+
+.team-members .member img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+
+
+/* Footer styling */
+footer {
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+social-icons img {
+    max-width: 30px;
+    height: auto;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    header img {
+        max-width: 90%;
+    }
+
+    .team-members .member {
+        flex-basis: calc(50% - 2rem);
+    }
+
+    .tech-logos img {
+        max-width: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    header img {
+        max-width: 100%;
+    }
+
+    .team-members .member {
+        flex-basis: calc(100% - 2rem);
+    }
+
+    .tech-logos img {
+        max-width: 60px;
+    }
+}
