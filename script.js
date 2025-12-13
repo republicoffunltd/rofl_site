@@ -1,22 +1,4 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const scrollArrows = document.getElementById('scroll-arrows');
-
-    // Create the first arrow
-    const arrow1 = document.createElement('div');
-    arrow1.classList.add('arrow');
-    arrow1.innerHTML = '<img src="images/arrow.png" alt="arrow">';
-
-    // Create the second arrow
-    const arrow2 = document.createElement('div');
-    arrow2.classList.add('arrow');
-    arrow2.innerHTML = '<img src="images/arrow.png" alt="arrow">';
-
-    // Append arrows to the scroll-arrows container
-    scrollArrows.appendChild(arrow1);
-    scrollArrows.appendChild(arrow2);
-});
-
-document.addEventListener("DOMContentLoaded", function() {
     const backToTopButton = document.getElementById('back-to-top');
 
     // Show or hide the button based on scroll position
