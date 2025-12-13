@@ -430,12 +430,12 @@ social-icons img {
     }
 
     .navbar ul {
-        font-size: 1em;
-        gap: 0.3rem 0.5rem;
+        font-size: 1.2em;
+        gap: 0.5rem 0.8rem;
     }
 
     .navbar ul li a {
-        padding: 6px 8px;
+        padding: 8px 10px;
         white-space: nowrap;
     }
 }
@@ -512,12 +512,12 @@ social-icons img {
     }
 
     .navbar ul {
-        font-size: 0.9em;
-        gap: 0.2rem 0.4rem;
+        font-size: 1.1em;
+        gap: 0.4rem 0.7rem;
     }
 
     .navbar ul li a {
-        padding: 6px 6px;
+        padding: 8px 8px;
         white-space: nowrap;
     }
 }
