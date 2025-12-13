@@ -25,11 +25,23 @@ body, h1, h2, h3, p, ul, li {
 body {
     font-family: 'VeteranTypewriter', Arial, sans-serif;
     line-height: 1.6;
-    background: url('images/background.jpg') no-repeat center top fixed;
+    position: relative;
+    z-index: 0;
+    background: url('images/background.jpg') no-repeat center top;
     background-color: #fe14ff;
     background-size: 100% auto;
     color: #000;
     background-attachment: scroll;
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url('images/bg_bottom.png') no-repeat center bottom;
+    background-size: 100% auto;
+    pointer-events: none;
+    z-index: -1;
 }
 
 h2 {
@@ -82,11 +94,14 @@ header img {
     list-style-type: none;
     padding: 0;
     font-size: 1.5em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem 1.2rem;
 }
 
 .navbar ul li {
-    display: inline;
-    margin-right: 20px;
+    display: inline-flex;
 }
 
 .navbar ul li a {
@@ -102,13 +117,18 @@ header img {
 
 /* Arrows */
 #scroll-arrows {
-    margin-top: 1rem;
+    margin-top: 0.1rem;
 }
 
 .arrow {
-    font-size: 1rem;
-    color: #e14ff;
+    font-size: 0.1rem;
+    max-height: 50px;
     animation: bounce 2s infinite;
+}
+
+.arrow img {
+    padding: 0;
+
 }
 
 @keyframes bounce {
@@ -178,9 +198,122 @@ main section {
 .tech-logos img {
     max-width: 100px;
     max-height: 100px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    padding: 1rem;
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* Game festival */
+#game-festival {
+    text-align: center;
+}
+
+.festival-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.festival-copy {
+    max-width: 420px;
+    text-align: left;
+    font-size: 1.2em;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 6px 6px 0 #000;
+}
+
+.festival-copy h3 {
+    text-align: left;
+    font-size: 2em;
+}
+
+.festival-copy p {
+    margin: 1rem 0;
+}
+
+.festival-link {
+    display: inline-block;
+    color: #000;
+    background: #fe14ff;
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 4px 4px 0 #000;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.festival-link:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 #000;
+}
+
+.festival-logo {
+    width: 320px;
+    height: 320px;
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+}
+
+.festival-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.logo-placeholder {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background: repeating-linear-gradient(45deg, #000 0, #000 10px, #fe14ff 10px, #fe14ff 20px);
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: bold;
+    display: grid;
+    place-items: center;
+    text-transform: uppercase;
+    box-shadow: 10px 10px 0 #000;
+}
+
+/* Games */
+.games-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.game-card {
+    width: 420px;
+    text-decoration: none;
+    color: #000;
+    display: block;
+}
+
+.game-thumb {
+    position: relative;
+    width: 100%;
+    padding-top: 90%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 /* Team members section */
+.team-content {
+    background: url('images/bg_section.png') no-repeat center center;
+    background-size: contain;
+    padding: 2rem 1rem;
+}
+
 .team-members {
     display: flex;
     justify-content: center;
@@ -237,6 +370,27 @@ social-icons img {
         line-height: 1.2;
     }
 
+    body::after {
+        background-size: auto 50%;
+    }
+
+    #games {
+        background: none;
+    }
+
+    #game-festival {
+        background: none;
+    }
+
+    #team {
+        background: none;
+    }
+
+    .team-content {
+        background: none;
+        padding: 0;
+    }
+
     h2 {
         font-size: 7em;
     }
@@ -261,6 +415,28 @@ social-icons img {
     .tech-logos img {
         max-width: 80px;
     }
+
+    .festival-wrapper {
+        gap: 1rem;
+    }
+
+    .festival-logo {
+        width: 260px;
+        height: 260px;
+    }
+
+    .game-card {
+        width: 320px;
+    }
+
+    .navbar ul {
+        font-size: 1.2em;
+        gap: 0.5rem 0.8rem;
+    }
+
+    .navbar ul li a {
+        padding: 8px 10px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -273,6 +449,27 @@ social-icons img {
         background: url('images/background.jpg') no-repeat ;
         background-color: #fe14ff;
         line-height: 1.2;
+    }
+
+    body::after {
+        background-size: auto 50%;
+    }
+
+    #games {
+        background: none;
+    }
+
+    #game-festival {
+        background: none;
+    }
+
+    #team {
+        background: none;
+    }
+
+    .team-content {
+        background: none;
+        padding: 0;
     }
 
     h2 {
@@ -298,5 +495,27 @@ social-icons img {
 
     .tech-logos img {
         max-width: 60px;
+    }
+
+    .festival-copy {
+        font-size: 1em;
+    }
+
+    .festival-logo {
+        width: 220px;
+        height: 220px;
+    }
+
+    .game-card {
+        width: 260px;
+    }
+
+    .navbar ul {
+        font-size: 1.1em;
+        gap: 0.4rem 0.7rem;
+    }
+
+    .navbar ul li a {
+        padding: 8px 8px;
     }
 }

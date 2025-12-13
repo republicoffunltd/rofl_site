@@ -4,16 +4,10 @@ document.addEventListener("DOMContentLoaded", function() {
     // Create the first arrow
     const arrow1 = document.createElement('div');
     arrow1.classList.add('arrow');
-    arrow1.innerHTML = '&#9660;'; // Unicode for down arrow
-
-    // Create the second arrow
-    const arrow2 = document.createElement('div');
-    arrow2.classList.add('arrow');
-    arrow2.innerHTML = '&#9660;'; // Unicode for down arrow
+    arrow1.innerHTML = '<img src="images/arrow.png" alt="arrow">';
 
     // Append arrows to the scroll-arrows container
     scrollArrows.appendChild(arrow1);
-    scrollArrows.appendChild(arrow2);
 });
 
 document.addEventListener("DOMContentLoaded", function() {
