@@ -430,7 +430,7 @@ social-icons img {
     }
 
     .navbar ul {
-        font-size: 1.2em;
+        font-size: 1em;
         gap: 0.5rem 0.8rem;
     }
 
@@ -511,8 +511,8 @@ social-icons img {
     }
 
     .navbar ul {
-        font-size: 1.1em;
-        gap: 0.4rem 0.7rem;
+        font-size: 0.9em;
+        gap: 0.4rem 0.6rem;
     }
 
     .navbar ul li a {

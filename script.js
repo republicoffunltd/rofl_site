@@ -6,8 +6,14 @@ document.addEventListener("DOMContentLoaded", function() {
     arrow1.classList.add('arrow');
     arrow1.innerHTML = '<img src="images/arrow.png" alt="arrow">';
 
+    // Create the second arrow
+    const arrow2 = document.createElement('div');
+    arrow2.classList.add('arrow');
+    arrow2.innerHTML = '<img src="images/arrow.png" alt="arrow">';
+
     // Append arrows to the scroll-arrows container
     scrollArrows.appendChild(arrow1);
+    scrollArrows.appendChild(arrow2);
 });
 
 document.addEventListener("DOMContentLoaded", function() {
