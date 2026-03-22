@@ -30,7 +30,7 @@ body {
     z-index: 0;
     background: url('images/background.jpg') no-repeat center top;
     background-color: #fe14ff;
-    background-size: 100% auto;
+    background-size: cover;
     color: #000;
     background-attachment: scroll;
 }
@@ -550,33 +550,48 @@ social-icons img {
 }
 
 /* Legal Hub Styles */
-body:has(#legal-hub) {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+/* Fallback class so legal page matches home background even without :has support */
+.legal-page {
+    background: url('images/background.jpg') no-repeat center top;
+    background-color: #fe14ff;
+    background-size: cover;
+    background-attachment: scroll;
 }
 
-body:has(#legal-hub)::after {
-    display: none !important;
+.legal-page::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url('images/bg_bottom.png') no-repeat center bottom;
+    background-size: cover;
+    pointer-events: none;
+    z-index: -1;
 }
 
-body:has(#legal-hub) header {
-    background: rgba(255, 255, 255, 0.95);
-    border-bottom: 2px solid #ddd;
+body:has(#legal-hub) header,
+.legal-page header {
+    background: transparent;
+    border: none;
 }
 
-body:has(#legal-hub) header img {
+body:has(#legal-hub) header img,
+.legal-page header img {
     max-width: 60%;
     padding: 1rem 0 !important;
 }
 
-body:has(#legal-hub) .navbar {
-    background: rgba(255, 255, 255, 0.95);
+body:has(#legal-hub) .navbar,
+.legal-page .navbar {
+    background: transparent;
 }
 
-body:has(#legal-hub) .navbar ul li a {
+body:has(#legal-hub) .navbar ul li a,
+.legal-page .navbar ul li a {
     color: #000;
 }
 
-body:has(#legal-hub) .navbar ul li a:hover {
+body:has(#legal-hub) .navbar ul li a:hover,
+.legal-page .navbar ul li a:hover {
     color: #667eea;
 }
 
@@ -771,7 +786,8 @@ body:has(#legal-hub) .navbar ul li a:hover {
     text-decoration: underline;
 }
 
-body:has(#legal-hub) footer {
-    background: rgba(255, 255, 255, 0.95);
-    border-top: 2px solid #ddd;
+body:has(#legal-hub) footer,
+.legal-page footer {
+    background: transparent;
+    border: none;
 }
