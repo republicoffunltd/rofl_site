@@ -1,7 +1,8 @@
-/* Reset some default styles */
+/* Reset some default styles - Updated for Legal Hub */
 html {
     scroll-behavior: smooth;
 }
+
 
 body, h1, h2, h3, p, ul, li {
     margin: 0;
@@ -342,6 +343,32 @@ footer {
     color: #fff;
     text-align: center;
     padding: 1rem 0;
+}
+
+.footer-legal-links {
+    margin: 1rem 0;
+    font-size: 0.9em;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0.5rem;
+}
+
+.footer-legal-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.footer-legal-links a:hover {
+    opacity: 0.7;
+    text-decoration: underline;
+}
+
+.footer-legal-links span {
+    color: #fff;
+    margin: 0 0.25rem;
 }
 
 .social-icons {
