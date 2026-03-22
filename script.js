@@ -22,10 +22,21 @@ document.addEventListener("DOMContentLoaded", function() {
 
     navbarLinks.forEach(link => {
         link.addEventListener('click', function(event) {
+            const href = this.getAttribute('href');
+            
+            // Check if the link is to a different page
+            if (href.includes('.html')) {
+                // Allow default behavior for cross-page links
+                return;
+            }
+            
+            // For same-page links, prevent default and smooth scroll
             event.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
+            const targetId = href.substring(1);
             const targetSection = document.getElementById(targetId);
-            targetSection.scrollIntoView({ behavior: 'smooth' });
+            if (targetSection) {
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            }
 
             // Remove active class from all links
             navbarLinks.forEach(navlink => {
